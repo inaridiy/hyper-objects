@@ -1,0 +1,13 @@
+{
+  "extends": "@tsconfig/node18",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "module": "ES2022",
+    "declaration": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "hyper-objects",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "inaridiy <inainainariinainari@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.6.0",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "peerDependencies": {
+    "better-sqlite3": "^8.4.0",
+    "kysely": "^0.25.0"
+  },
+  "dependencies": {
+    "dataloader": "^2.2.2",
+    "kysely": "^0.25.0",
+    "lizod": "^0.2.4",
+    "superjson": "^1.12.3",
+    "tslib": "^2.5.3",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@tsconfig/node18": "^2.0.0",
+    "@types/better-sqlite3": "^7.6.4",
+    "@types/jsdom": "^21.1.1",
+    "@types/node": "^20.1.2",
+    "@types/uuid": "^9.0.1",
+    "rollup": "^3.25.1",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4"
+  }
+}
