@@ -189,6 +189,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@inaridiy/hyper-objects@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@inaridiy/hyper-objects@workspace:."
+  dependencies:
+    "@rollup/plugin-typescript": ^11.1.1
+    "@tsconfig/node18": ^2.0.0
+    "@types/better-sqlite3": ^7.6.4
+    "@types/jsdom": ^21.1.1
+    "@types/node": ^20.1.2
+    "@types/uuid": ^9.0.1
+    dataloader: ^2.2.2
+    kysely: ^0.25.0
+    lizod: ^0.2.4
+    rollup: ^3.25.1
+    superjson: ^1.12.3
+    tslib: ^2.5.3
+    tsx: ^3.12.7
+    typescript: ^5.0.4
+    uuid: ^9.0.0
+  peerDependencies:
+    better-sqlite3: ^8.4.0
+    kysely: ^0.25.0
+  languageName: unknown
+  linkType: soft
+
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -875,31 +900,6 @@ __metadata:
   checksum: 9c7a74a2827f9294c009266c82031030eae811ca87b0da3dceb8d6071b9bde22c9f3daef0469c3c533cc67a97d8a167cd9fc0389350e5f415f61a79b171ded16
   languageName: node
   linkType: hard
-
-"hyper-objects@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "hyper-objects@workspace:."
-  dependencies:
-    "@rollup/plugin-typescript": ^11.1.1
-    "@tsconfig/node18": ^2.0.0
-    "@types/better-sqlite3": ^7.6.4
-    "@types/jsdom": ^21.1.1
-    "@types/node": ^20.1.2
-    "@types/uuid": ^9.0.1
-    dataloader: ^2.2.2
-    kysely: ^0.25.0
-    lizod: ^0.2.4
-    rollup: ^3.25.1
-    superjson: ^1.12.3
-    tslib: ^2.5.3
-    tsx: ^3.12.7
-    typescript: ^5.0.4
-    uuid: ^9.0.0
-  peerDependencies:
-    better-sqlite3: ^8.4.0
-    kysely: ^0.25.0
-  languageName: unknown
-  linkType: soft
 
 "iconv-lite@npm:^0.6.2":
   version: 0.6.3

@@ -1,7 +1,8 @@
 {
-  "name": "hyper-objects",
+  "name": "@inaridiy/hyper-objects",
   "version": "1.0.0",
   "type": "module",
+  "private": false,
   "author": "inaridiy <inainainariinainari@gmail.com>",
   "license": "MIT",
   "packageManager": "yarn@3.6.0",
