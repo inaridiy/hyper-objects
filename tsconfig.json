@@ -4,7 +4,8 @@
     "baseUrl": ".",
     "outDir": "dist",
     "module": "ES2022",
-    "declaration": true
+    "declaration": true,
+    "sourceMap": true,
   },
   "exclude": [
     "node_modules",
