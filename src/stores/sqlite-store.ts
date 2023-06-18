@@ -82,9 +82,7 @@ export class SQLiteStore extends HyperStore {
   }
 
   private _buildQuery(querySnapshot: QuerySnapshot) {
-    let query = this.db
-      .selectFrom("hyper_objects")
-      .where("type", "=", querySnapshot.type);
+    let query = this.db.selectFrom("hyper_objects").where("type", "=", querySnapshot.type);
 
     for (const filter of querySnapshot.filters) {
       let fieldValue =
@@ -160,9 +158,7 @@ export class SQLiteStore extends HyperStore {
     return query;
   }
 
-  async executeQueries(
-    querySnapshots: Readonly<QuerySnapshot[]>
-  ): Promise<StorebleSnapshot[][]> {
+  async executeQueries(querySnapshots: Readonly<QuerySnapshot[]>): Promise<StorebleSnapshot[][]> {
     const queries = querySnapshots.map((q) => {
       let query = this._buildQuery(q).selectAll();
       return query;
@@ -181,13 +177,9 @@ export class SQLiteStore extends HyperStore {
     );
   }
 
-  async countQueries(
-    querySnapshots: Readonly<QuerySnapshot[]>
-  ): Promise<number[]> {
+  async countQueries(querySnapshots: Readonly<QuerySnapshot[]>): Promise<number[]> {
     const queries = querySnapshots.map((q) => {
-      let query = this._buildQuery(q).select([
-        this.db.fn.count("id").as("count"),
-      ]);
+      let query = this._buildQuery(q).select([this.db.fn.count("id").as("count")]);
       return query;
     });
 

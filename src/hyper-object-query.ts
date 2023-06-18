@@ -35,14 +35,14 @@ export type QuerySnapshot = {
   offset?: number;
 };
 
-export type Fields<Hyper extends HyperObject<any, any>> = keyof HyperProps<Hyper>;
+export type Fields<Hyper extends HyperObject<any, {}, any>> = keyof HyperProps<Hyper>;
 export type FieldValue<
   Hyper extends HyperObject<any, any>,
   Field extends Fields<Hyper>
 > = HyperProps<Hyper>[Field];
 
 export class HyperObjectQuery<
-  Hyper extends HyperObject<any, any>,
+  Hyper extends HyperObject<any, any, any>,
   First = false,
   Count = false,
   Result = First extends true ? Hyper | undefined : Count extends true ? number : Hyper[]
@@ -100,7 +100,12 @@ export class HyperObjectQuery<
     value: FieldValue<Hyper, typeof field>,
     mode: NumableCastMode = "text_comparison"
   ): this {
-    this._filters.push({ operator: "gte", field: field as string, value, mode });
+    this._filters.push({
+      operator: "gte",
+      field: field as string,
+      value,
+      mode,
+    });
     return this;
   }
 
@@ -122,7 +127,12 @@ export class HyperObjectQuery<
     value: FieldValue<Hyper, typeof field>,
     mode: NumableCastMode = "text_comparison"
   ): this {
-    this._filters.push({ operator: "lte", field: field as string, value, mode });
+    this._filters.push({
+      operator: "lte",
+      field: field as string,
+      value,
+      mode,
+    });
     return this;
   }
 
